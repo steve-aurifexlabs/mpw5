@@ -1,0 +1,7 @@
+# running in cover/src/
+read -formal hyperram.v
+prep -top hyperram
+
+hierarchy -simcheck
+write_json ../model/design.json
+write_rtlil ../model/design.il

@@ -93,7 +93,7 @@ void main()
 	reg_mprj_datal = 0xAB600000;
 
 	// Configure LA[64] LA[65] as outputs from the cpu
-	reg_la2_oenb = reg_la2_iena = 0x00000003; 
+	reg_la2_oenb = reg_la2_iena = 0x000000ff; 
 
 	// Set clk & reset to one
 	reg_la2_data = 0x00000003;
@@ -107,14 +107,17 @@ void main()
 		reg_la2_data = 0x00000000 | clk;
 	}
 
-        // reg_mprj_datal = 0xAB610000;
+        //reg_mprj_datal = 0xAB610000;  // Manually inspected cover for write - March 20, 2022
 
         while (1){
-                if (reg_la0_data_in >= 0x05) {
+		clk = !clk;
+		reg_la2_data = 0x000000f0 | clk;  // Keep output transaction_begin high
+
+		if ((0x0000000f & reg_la3_data_in) == 0x00000002) {  // Check for control_state 2
                         reg_mprj_datal = 0xAB610000;
                         break;
                 }
-                
         }
 
+	
 }

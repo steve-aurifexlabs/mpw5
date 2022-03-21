@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+<testsuite timestamp="2022-03-21T14:11:57" hostname="aurifex-tools" package="cover" id="0" name="default" tests="9" errors="0" failures="0" time="5" skipped="9">
+<properties>
+<property name="os" value="Linux"/>
+<property name="expect" value="PASS"/>
+<property name="status" value="PASS"/>
+</properties>
+<testcase classname="default" name="build execution" time="0">
+</testcase>
+<testcase classname="default" name="Property COVER in hyperram at hyperram.v:297.4-297.40" time="0" type="COVER" location="hyperram.v:297.4-297.40" id="cover_ca">
+<skipped />
+</testcase>
+<testcase classname="default" name="Property COVER in hyperram at hyperram.v:301.4-301.45" time="0" type="COVER" location="hyperram.v:301.4-301.45" id="cover_done">
+<skipped />
+</testcase>
+<testcase classname="default" name="Property COVER in hyperram at hyperram.v:296.4-296.42" time="0" type="COVER" location="hyperram.v:296.4-296.42" id="cover_idle">
+<skipped />
+</testcase>
+<testcase classname="default" name="Property COVER in hyperram at hyperram.v:300.4-300.44" time="0" type="COVER" location="hyperram.v:300.4-300.44" id="cover_read">
+<skipped />
+</testcase>
+<testcase classname="default" name="Property COVER in hyperram at hyperram.v:303.4-303.43" time="0" type="COVER" location="hyperram.v:303.4-303.43" id="cover_read_2">
+<skipped />
+</testcase>
+<testcase classname="default" name="Property COVER in hyperram at hyperram.v:298.4-298.42" time="0" type="COVER" location="hyperram.v:298.4-298.42" id="cover_wait">
+<skipped />
+</testcase>
+<testcase classname="default" name="Property COVER in hyperram at hyperram.v:299.4-299.43" time="0" type="COVER" location="hyperram.v:299.4-299.43" id="cover_write">
+<skipped />
+</testcase>
+<testcase classname="default" name="Property COVER in hyperram at hyperram.v:302.4-302.45" time="0" type="COVER" location="hyperram.v:302.4-302.45" id="cover_write_2">
+<skipped />
+</testcase>
+<testcase classname="default" name="Property COVER in hyperram at hyperram.v:304.4-304.65" time="0" type="COVER" location="hyperram.v:304.4-304.65" id="cover_write_read">
+<skipped />
+</testcase>
+<system-out>SBY 14:11:51 [cover] Copy '/root/mar20/tool/caravel_tutorial/caravel_example/verilog/rtl/original/hyperram.v' to '/root/mar20/tool/caravel_tutorial/caravel_example/verilog/rtl/unit_test/cover/src/hyperram.v'.
+SBY 14:11:51 [cover] engine_0: smtbmc
+SBY 14:11:51 [cover] base: starting process &quot;cd cover/src; yosys -ql ../model/design.log ../model/design.ys&quot;
+SBY 14:11:51 [cover] base: Warning: Yosys has only limited support for tri-state logic at the moment. (hyperram.v:51)
+SBY 14:11:51 [cover] base: Warning: Yosys has only limited support for tri-state logic at the moment. (hyperram.v:52)
+SBY 14:11:51 [cover] base: Warning: Yosys has only limited support for tri-state logic at the moment. (hyperram.v:96)
+SBY 14:11:51 [cover] base: Warning: Yosys has only limited support for tri-state logic at the moment. (hyperram.v:97)
+SBY 14:11:51 [cover] base: Warning: wire '\transaction_end' is assigned in a block at hyperram.v:98.3-98.22.
+SBY 14:11:51 [cover] base: Warning: wire '\transaction_end' is assigned in a block at hyperram.v:106.5-106.24.
+SBY 14:11:51 [cover] base: Warning: wire '\rst' is assigned in a block at hyperram.v:281.4-281.11.
+SBY 14:11:51 [cover] base: Warning: wire '\address' is assigned in a block at hyperram.v:282.4-282.24.
+SBY 14:11:51 [cover] base: Warning: wire '\data_in' is assigned in a block at hyperram.v:287.4-287.24.
+SBY 14:11:51 [cover] base: Warning: wire '\data_out' is assigned in a block at hyperram.v:288.4-288.25.
+SBY 14:11:51 [cover] base: Warning: wire '\rst' is assigned in a block at hyperram.v:292.4-292.11.
+SBY 14:11:51 [cover] base: finished (returncode=0)
+SBY 14:11:51 [cover] smt2: starting process &quot;cd cover/model; yosys -ql design_smt2.log design_smt2.ys&quot;
+SBY 14:11:51 [cover] smt2: finished (returncode=0)
+SBY 14:11:51 [cover] engine_0: starting process &quot;cd cover; yosys-smtbmc --presat --unroll -c --noprogress -t 150  --append 0 --dump-vcd engine_0/trace%.vcd --dump-vlogtb engine_0/trace%_tb.v --dump-smtc engine_0/trace%.smtc model/design_smt2.smt2&quot;
+SBY 14:11:51 [cover] engine_0: ##   0:00:00  Solver: yices
+SBY 14:11:51 [cover] engine_0: ##   0:00:00  Checking cover reachability in step 0..
+SBY 14:11:51 [cover] engine_0: ##   0:00:00  Checking cover reachability in step 1..
+SBY 14:11:51 [cover] engine_0: ##   0:00:00  Reached cover statement at cover_idle in step 1.
+SBY 14:11:51 [cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace0.vcd
+SBY 14:11:51 [cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace0_tb.v
+SBY 14:11:51 [cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace0.smtc
+SBY 14:11:51 [cover] engine_0: ##   0:00:00  Checking cover reachability in step 1..
+SBY 14:11:51 [cover] engine_0: ##   0:00:00  Checking cover reachability in step 2..
+SBY 14:11:51 [cover] engine_0: ##   0:00:00  Checking cover reachability in step 3..
+SBY 14:11:51 [cover] engine_0: ##   0:00:00  Checking cover reachability in step 4..
+SBY 14:11:51 [cover] engine_0: ##   0:00:00  Checking cover reachability in step 5..
+SBY 14:11:52 [cover] engine_0: ##   0:00:00  Checking cover reachability in step 6..
+SBY 14:11:52 [cover] engine_0: ##   0:00:00  Checking cover reachability in step 7..
+SBY 14:11:52 [cover] engine_0: ##   0:00:00  Reached cover statement at cover_ca in step 7.
+SBY 14:11:52 [cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace1.vcd
+SBY 14:11:52 [cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace1_tb.v
+SBY 14:11:52 [cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace1.smtc
+SBY 14:11:52 [cover] engine_0: ##   0:00:00  Checking cover reachability in step 7..
+SBY 14:11:52 [cover] engine_0: ##   0:00:00  Checking cover reachability in step 8..
+SBY 14:11:52 [cover] engine_0: ##   0:00:00  Reached cover statement at cover_wait in step 8.
+SBY 14:11:52 [cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace2.vcd
+SBY 14:11:52 [cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace2_tb.v
+SBY 14:11:52 [cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace2.smtc
+SBY 14:11:52 [cover] engine_0: ##   0:00:00  Checking cover reachability in step 8..
+SBY 14:11:52 [cover] engine_0: ##   0:00:00  Checking cover reachability in step 9..
+SBY 14:11:52 [cover] engine_0: ##   0:00:00  Checking cover reachability in step 10..
+SBY 14:11:52 [cover] engine_0: ##   0:00:00  Checking cover reachability in step 11..
+SBY 14:11:52 [cover] engine_0: ##   0:00:00  Checking cover reachability in step 12..
+SBY 14:11:52 [cover] engine_0: ##   0:00:00  Checking cover reachability in step 13..
+SBY 14:11:52 [cover] engine_0: ##   0:00:00  Reached cover statement at cover_write in step 13.
+SBY 14:11:52 [cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace3.vcd
+SBY 14:11:52 [cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace3_tb.v
+SBY 14:11:52 [cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace3.smtc
+SBY 14:11:52 [cover] engine_0: ##   0:00:00  Checking cover reachability in step 13..
+SBY 14:11:52 [cover] engine_0: ##   0:00:00  Reached cover statement at cover_read in step 13.
+SBY 14:11:52 [cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace4.vcd
+SBY 14:11:52 [cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace4_tb.v
+SBY 14:11:52 [cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace4.smtc
+SBY 14:11:52 [cover] engine_0: ##   0:00:00  Checking cover reachability in step 13..
+SBY 14:11:52 [cover] engine_0: ##   0:00:00  Checking cover reachability in step 14..
+SBY 14:11:52 [cover] engine_0: ##   0:00:00  Checking cover reachability in step 15..
+SBY 14:11:52 [cover] engine_0: ##   0:00:00  Checking cover reachability in step 16..
+SBY 14:11:52 [cover] engine_0: ##   0:00:00  Checking cover reachability in step 17..
+SBY 14:11:52 [cover] engine_0: ##   0:00:00  Reached cover statement at cover_done in step 17.
+SBY 14:11:52 [cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace5.vcd
+SBY 14:11:52 [cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace5_tb.v
+SBY 14:11:52 [cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace5.smtc
+SBY 14:11:52 [cover] engine_0: ##   0:00:00  Checking cover reachability in step 17..
+SBY 14:11:52 [cover] engine_0: ##   0:00:00  Checking cover reachability in step 18..
+SBY 14:11:52 [cover] engine_0: ##   0:00:00  Checking cover reachability in step 19..
+SBY 14:11:52 [cover] engine_0: ##   0:00:01  Checking cover reachability in step 20..
+SBY 14:11:52 [cover] engine_0: ##   0:00:01  Checking cover reachability in step 21..
+SBY 14:11:53 [cover] engine_0: ##   0:00:01  Checking cover reachability in step 22..
+SBY 14:11:53 [cover] engine_0: ##   0:00:01  Checking cover reachability in step 23..
+SBY 14:11:53 [cover] engine_0: ##   0:00:01  Checking cover reachability in step 24..
+SBY 14:11:53 [cover] engine_0: ##   0:00:01  Checking cover reachability in step 25..
+SBY 14:11:53 [cover] engine_0: ##   0:00:01  Checking cover reachability in step 26..
+SBY 14:11:53 [cover] engine_0: ##   0:00:01  Checking cover reachability in step 27..
+SBY 14:11:53 [cover] engine_0: ##   0:00:01  Checking cover reachability in step 28..
+SBY 14:11:53 [cover] engine_0: ##   0:00:01  Checking cover reachability in step 29..
+SBY 14:11:53 [cover] engine_0: ##   0:00:02  Checking cover reachability in step 30..
+SBY 14:11:54 [cover] engine_0: ##   0:00:02  Checking cover reachability in step 31..
+SBY 14:11:54 [cover] engine_0: ##   0:00:02  Checking cover reachability in step 32..
+SBY 14:11:54 [cover] engine_0: ##   0:00:02  Checking cover reachability in step 33..
+SBY 14:11:54 [cover] engine_0: ##   0:00:02  Checking cover reachability in step 34..
+SBY 14:11:54 [cover] engine_0: ##   0:00:03  Checking cover reachability in step 35..
+SBY 14:11:55 [cover] engine_0: ##   0:00:03  Checking cover reachability in step 36..
+SBY 14:11:55 [cover] engine_0: ##   0:00:03  Checking cover reachability in step 37..
+SBY 14:11:56 [cover] engine_0: ##   0:00:04  Checking cover reachability in step 38..
+SBY 14:11:56 [cover] engine_0: ##   0:00:04  Reached cover statement at cover_write_read in step 38.
+SBY 14:11:56 [cover] engine_0: ##   0:00:04  Writing trace to VCD file: engine_0/trace6.vcd
+SBY 14:11:56 [cover] engine_0: ##   0:00:04  Writing trace to Verilog testbench: engine_0/trace6_tb.v
+SBY 14:11:56 [cover] engine_0: ##   0:00:04  Writing trace to constraints file: engine_0/trace6.smtc
+SBY 14:11:56 [cover] engine_0: ##   0:00:04  Checking cover reachability in step 38..
+SBY 14:11:56 [cover] engine_0: ##   0:00:04  Reached cover statement at cover_write_2 in step 38.
+SBY 14:11:56 [cover] engine_0: ##   0:00:04  Writing trace to VCD file: engine_0/trace7.vcd
+SBY 14:11:57 [cover] engine_0: ##   0:00:05  Writing trace to Verilog testbench: engine_0/trace7_tb.v
+SBY 14:11:57 [cover] engine_0: ##   0:00:05  Writing trace to constraints file: engine_0/trace7.smtc
+SBY 14:11:57 [cover] engine_0: ##   0:00:05  Checking cover reachability in step 38..
+SBY 14:11:57 [cover] engine_0: ##   0:00:05  Reached cover statement at cover_read_2 in step 38.
+SBY 14:11:57 [cover] engine_0: ##   0:00:05  Writing trace to VCD file: engine_0/trace8.vcd
+SBY 14:11:57 [cover] engine_0: ##   0:00:05  Writing trace to Verilog testbench: engine_0/trace8_tb.v
+SBY 14:11:57 [cover] engine_0: ##   0:00:05  Writing trace to constraints file: engine_0/trace8.smtc
+SBY 14:11:57 [cover] engine_0: ##   0:00:05  Status: passed
+SBY 14:11:57 [cover] engine_0: finished (returncode=0)
+SBY 14:11:57 [cover] engine_0: Status returned by engine: pass
+SBY 14:11:57 [cover] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:05 (5)
+SBY 14:11:57 [cover] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:05 (5)
+SBY 14:11:57 [cover] summary: engine_0 (smtbmc) returned pass
+SBY 14:11:57 [cover] summary: trace: cover/engine_0/trace0.vcd
+SBY 14:11:57 [cover] summary: trace: cover/engine_0/trace1.vcd
+SBY 14:11:57 [cover] summary: trace: cover/engine_0/trace2.vcd
+SBY 14:11:57 [cover] summary: trace: cover/engine_0/trace3.vcd
+SBY 14:11:57 [cover] summary: trace: cover/engine_0/trace4.vcd
+SBY 14:11:57 [cover] summary: and 4 further traces
+SBY 14:11:57 [cover] DONE (PASS, rc=0)
+</system-out>
+<system-err>
+</system-err>
+</testsuite>
+</testsuites>
