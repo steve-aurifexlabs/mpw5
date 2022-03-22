@@ -1,7 +1,10 @@
 # PSRAM Interface with PRNG
 
 PSRAM and integration: Steve Goldsmith, Lead Instructor, Aurifex Labs, https://aurifexlabs.com
+
 PRNG: Zhenle Cao
+
+Many thanks to Matt Venn!
 
 ## Design
 
@@ -51,6 +54,7 @@ https://symbiyosys.readthedocs.io/en/latest/install.html
 
 To run:
 cd verilog/rtl/unit_test
+
 sby cover.sby
 
 To run again:
@@ -62,6 +66,8 @@ gtkwave cover/engine_0/trace*.png
 Tests include:
 - read
 - write
+- 2 reads
+- 2 writes
 - read and write
 
 ### Caravel Test
@@ -69,6 +75,7 @@ Tests include:
 To run:
 
 make verify-la_test2-rtl
+
 make verify-la_test2-gl
 
 This only tests that the PSRAM state machine advances to state 2.
